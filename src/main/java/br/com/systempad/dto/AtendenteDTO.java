@@ -69,32 +69,32 @@ public class AtendenteDTO implements Serializable {
 		return telefone;
 	}
 
-	public void setTelefone(String Telefone) {
-		this.telefone = Telefone;
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
 	}
         
           public String getEmail() {
 		return email;
 	}
 
-	public void setEmail(String Email) {
-		this.email = Email;
+	public void setEmail(String email) {
+		this.email = email;
 	}
         
           public String getUserName() {
 		return userName;
 	}
 
-	public void setUserName(String UserName) {
-		this.userName = UserName;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
         
           public String getSenha() {
 		return senha;
 	}
 
-	public void setSenha(String Senha) {
-		this.senha = Senha;
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 	
