@@ -16,7 +16,7 @@ public class Produto implements Serializable {
 	
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_produto;
+	private Long idProduto;
 	private String nome;
 	private String descricao;
 	private Double preco;
@@ -27,19 +27,19 @@ public class Produto implements Serializable {
 	}
 
 	public Produto(Long id, String nome, String descricao, Double preco) {
-		this.id_produto = id;
+		this.idProduto = id;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.preco = preco;
 		
 	}
 	
-	public Long getId_produto() {
-		return id_produto;
+	public Long getIdProduto() {
+		return idProduto;
 	}
 
-	public void setId_produto(Long id_produto) {
-		this.id_produto = id_produto;
+	public void setIdProduto(Long idProduto) {
+		this.idProduto = idProduto;
 	}
 
 	public String getNome() {
@@ -68,7 +68,7 @@ public class Produto implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id_produto);
+		return Objects.hash(idProduto);
 	}
 
 	@Override
@@ -80,7 +80,7 @@ public class Produto implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Produto other = (Produto) obj;
-		return Objects.equals(id_produto, other.id_produto);
+		return Objects.equals(idProduto, other.idProduto);
 	}
 	
 }
