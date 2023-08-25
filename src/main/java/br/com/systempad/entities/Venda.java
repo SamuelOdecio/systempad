@@ -5,9 +5,13 @@ import java.util.Objects;
 
 import br.com.systempad.enums.Pagamento;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -19,16 +23,22 @@ public class Venda implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idVenda;
 	private Date data;
+	@Enumerated(EnumType.STRING)
 	private Pagamento pagamento;
-
+	@ManyToOne
+	@JoinColumn(name = "id_atendente_fk")
+	private Atendente atendente;
+	
+	
 	public Venda() {
 
 	}
 
-	public Venda(Long idVenda, Date data, Pagamento pagamento) {
+	public Venda(Long idVenda, Date data, Pagamento pagamento, Atendente atendente) {
 		this.idVenda = idVenda;
 		this.data = data;
 		this.pagamento = pagamento;
+		this.atendente = atendente;
 
 
 	}
@@ -55,6 +65,15 @@ public class Venda implements Serializable {
 
 	public void setPagamento(Pagamento pagamento) {
 		this.pagamento = pagamento;
+	}
+
+	
+	public Atendente getAtendente() {
+		return atendente;
+	}
+
+	public void setAtendente(Atendente atendente) {
+		this.atendente = atendente;
 	}
 
 	@Override

@@ -26,6 +26,7 @@ public class AtendenteService {
         List<Atendente> lista = repository.findAll();
         return lista.stream().map(x -> new AtendenteDTO(x)).collect(Collectors.toList());
     }
+    /*
 
     @Transactional(readOnly = true)
     public AtendenteDTO findById(Long id) {
@@ -79,4 +80,5 @@ public class AtendenteService {
                     "O recurso com o ID " + id + " não foi localizado");
         }
     }
+    */
 }

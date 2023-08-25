@@ -22,6 +22,8 @@ import br.com.systempad.services.VendaService;
 @RequestMapping(value = "/venda")
 public class VendaResource {
 	
+	
+	
 	@Autowired
 	private VendaService service;
 	
@@ -30,7 +32,7 @@ public class VendaResource {
 		List<VendaDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
-
+/*
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<VendaDTO> findById(@PathVariable Long id){
 		VendaDTO dto = service.findById(id);
@@ -61,4 +63,5 @@ public class VendaResource {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
+	*/
 }

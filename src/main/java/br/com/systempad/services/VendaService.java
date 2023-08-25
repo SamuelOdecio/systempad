@@ -28,7 +28,7 @@ public class VendaService {
 		List<Venda> lista = repository.findAll();
 		return lista.stream().map(x -> new VendaDTO(x)).collect(Collectors.toList());
 	}
-
+/*
 	@Transactional(readOnly = true)
 	public VendaDTO findById(Long id) {
 		Optional<Venda> obj = repository.findById(id);
@@ -78,4 +78,5 @@ public class VendaService {
 					"O recurso com o ID "+id+" não foi localizado");
 		}
 	}
+	*/
 }

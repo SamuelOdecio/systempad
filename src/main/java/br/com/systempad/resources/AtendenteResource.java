@@ -30,6 +30,7 @@ public class AtendenteResource {
 		List<AtendenteDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
+	/*
 
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<AtendenteDTO> findById(@PathVariable Long id){
@@ -61,4 +62,5 @@ public class AtendenteResource {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
+	*/
 }

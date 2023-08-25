@@ -8,12 +8,14 @@ import jakarta.persistence.Table;
 public class Atendente extends Pessoa {
 	private static final long serialVersionUID = 1L;
 	
+
+
 	public Atendente () {
 		
 	}
 	
 
-    public Atendente (Long id, String nome, String cpf, String telefone, String email, String userName, String senha) {
+    public Atendente (Atendente atendente, Long id, String nome, String cpf, String telefone, String email, String userName, String senha) {
     	super();
         
     }

@@ -14,6 +14,7 @@ public class AtendenteDTO implements Serializable {
     private String email;
     private String userName;
     private String senha;
+
         
 	public AtendenteDTO() {
 		// TODO Auto-generated constructor stub
@@ -97,5 +98,7 @@ public class AtendenteDTO implements Serializable {
 		this.senha = senha;
 	}
 
+
+	
 	
 }
