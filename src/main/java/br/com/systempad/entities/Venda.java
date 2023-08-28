@@ -13,6 +13,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 
 @Entity
 @Table(name = "tb_venda")
@@ -22,6 +24,7 @@ public class Venda implements Serializable {
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idVenda;
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date data;
 	@Enumerated(EnumType.STRING)
 	private Pagamento pagamento;

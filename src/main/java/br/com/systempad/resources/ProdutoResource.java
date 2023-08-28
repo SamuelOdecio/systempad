@@ -30,7 +30,7 @@ public class ProdutoResource {
 		List<ProdutoDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
-
+/*
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<ProdutoDTO> findById(@PathVariable Long id){
 		ProdutoDTO dto = service.findById(id);
@@ -61,4 +61,5 @@ public class ProdutoResource {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
+	*/
 }

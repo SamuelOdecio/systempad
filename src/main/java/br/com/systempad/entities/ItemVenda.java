@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,17 +19,19 @@ public class ItemVenda implements Serializable {
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idItemVenda;
-	private Long idProduto;
 	private int quantidade;
+	@ManyToOne
+	@JoinColumn(name = "id_produto_fk")
+	private Produto produto;
 	
 	public ItemVenda() {
 		
 	}
 
-	public ItemVenda(Long idItemVenda, Long idProduto, int quantidade) {
+	public ItemVenda(Long idItemVenda,  int quantidade, Produto produto) {
 		this.idItemVenda = idItemVenda;
-		this.idProduto = idProduto;
 		this.quantidade = quantidade;
+		this.produto = produto;
 		
 	}
 
@@ -39,12 +43,12 @@ public class ItemVenda implements Serializable {
 		this.idItemVenda = idItemVenda;
 	}
 
-	public Long getIdProduto() {
-		return idProduto;
+	public Produto getProduto() {
+		return produto;
 	}
 
-	public void setIdProduto(Long idProduto) {
-		this.idProduto = idProduto;
+	public void setProduto(Produto produto) {
+		this.produto = produto;
 	}
 
 	public int getQuantidade() {

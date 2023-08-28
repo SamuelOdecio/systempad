@@ -9,3 +9,4 @@ INSERT INTO TB_VENDA (pagamento, id_atendente_fk) VALUES ('PIX', 1 );
 INSERT INTO TB_VENDA (pagamento, id_atendente_fk) VALUES ('CARTAODEBITO', 2);
 INSERT INTO TB_VENDA (pagamento, id_atendente_fk) VALUES ('CARTAOCREDITO', 2);
 INSERT INTO TB_VENDA (pagamento, id_atendente_fk) VALUES ('AVISTA', 1); 
+INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk) values ('5', 2);
