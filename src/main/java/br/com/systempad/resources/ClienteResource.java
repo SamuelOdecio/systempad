@@ -29,11 +29,11 @@ public class ClienteResource {
 		List<ClienteDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
-
+	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<ClienteDTO> findById(@PathVariable Long id){
+	public ResponseEntity<ClienteDTO> findById(@PathVariable Long id){		
 		ClienteDTO dto = service.findById(id);
-		return ResponseEntity.ok().body(dto);
+		return ResponseEntity.ok().body(dto);	
 	}
 	
 	@PostMapping
@@ -46,15 +46,13 @@ public class ClienteResource {
 					.toUri();
 		return ResponseEntity.created(uri).body(null);
 	}
-
+	
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<ClienteDTO> update(
-			@PathVariable Long id,
-			@RequestBody ClienteDTO dto){
+	public ResponseEntity<ClienteDTO> update(@PathVariable Long id, @RequestBody ClienteDTO dto){
 		dto = service.update(id, dto);
 		return ResponseEntity.ok().body(dto);
 	}
-
+	
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Long id){
 		service.delete(id);
