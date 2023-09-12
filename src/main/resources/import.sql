@@ -12,7 +12,7 @@ INSERT INTO TB_VENDA (pagamento, id_atendente_fk, id_cliente_fk) VALUES ('PIX', 
 INSERT INTO TB_VENDA (pagamento, id_atendente_fk, id_cliente_fk) VALUES ('CARTAODEBITO', 2, 2);
 INSERT INTO TB_VENDA (pagamento, id_atendente_fk, id_cliente_fk) VALUES ('CARTAOCREDITO', 2, 3);
 INSERT INTO TB_VENDA (pagamento, id_atendente_fk, id_cliente_fk) VALUES ('AVISTA', 1, 2); 
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk) values ('5', 2);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk) values ('1', 1);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk) values ('3', 3);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk) values ('2', 4);
+INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('5', 2, 1);
+INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('1', 1, 2);
+INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('3', 3, 3);
+INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('2', 4, 4);

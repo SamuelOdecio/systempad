@@ -24,14 +24,19 @@ public class ItemVenda implements Serializable {
 	@JoinColumn(name = "id_produto_fk")
 	private Produto produto;
 	
+	@ManyToOne
+	@JoinColumn(name = "id_venda_fk")
+	private Venda venda;
+	
 	public ItemVenda() {
 		
 	}
 
-	public ItemVenda(Long idItemVenda,  int quantidade, Produto produto) {
+	public ItemVenda(Long idItemVenda,  int quantidade, Produto produto, Venda venda) {
 		this.idItemVenda = idItemVenda;
 		this.quantidade = quantidade;
 		this.produto = produto;
+		this.venda = venda;
 		
 	}
 
@@ -57,6 +62,14 @@ public class ItemVenda implements Serializable {
 
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
+	}
+
+	public Venda getVenda() {
+		return venda;
+	}
+
+	public void setVenda(Venda venda) {
+		this.venda = venda;
 	}
 
 	@Override

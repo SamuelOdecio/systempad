@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import br.com.systempad.entities.ItemVenda;
 import br.com.systempad.entities.Produto;
+import br.com.systempad.entities.Venda;
 
 public class ItemVendaDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -11,15 +12,17 @@ public class ItemVendaDTO implements Serializable {
 	private Long idItemVenda;
 	private int quantidade;
 	private Produto produto;
+	private Venda venda;
 
 	public ItemVendaDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ItemVendaDTO(Long idItemVenda, int quantidade, Produto produto) {
+	public ItemVendaDTO(Long idItemVenda, int quantidade, Produto produto, Venda venda) {
 		this.idItemVenda = idItemVenda;
 		this.quantidade = quantidade;
 		this.produto = produto;
+		this.venda = venda;
 
 	}
 
@@ -27,6 +30,7 @@ public class ItemVendaDTO implements Serializable {
 		this.idItemVenda = entity.getIdItemVenda();
 		this.quantidade = entity.getQuantidade();
 		this.produto = entity.getProduto();
+		this.venda = entity.getVenda();
 
 	}
 
@@ -53,6 +57,16 @@ public class ItemVendaDTO implements Serializable {
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
+
+	public Venda getVenda() {
+		return venda;
+	}
+
+	public void setVenda(Venda venda) {
+		this.venda = venda;
+	}
+	
+	
 
 
 	
