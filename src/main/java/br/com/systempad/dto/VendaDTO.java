@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import br.com.systempad.entities.Atendente;
+import br.com.systempad.entities.Cliente;
 import br.com.systempad.entities.Venda;
 import br.com.systempad.enums.Pagamento;
 
@@ -14,17 +15,19 @@ public class VendaDTO implements Serializable {
 	private Date data;
 	private Pagamento pagamento;
 	private Atendente atendente;
+	private Cliente cliente;
 	
 
 	public VendaDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public VendaDTO(Long idVenda, Date data, Atendente atendente, Pagamento pagamento) {
+	public VendaDTO(Long idVenda, Date data, Pagamento pagamento, Atendente atendente, Cliente cliente) {
 		this.idVenda = idVenda;
 		this.data = data;
-		this.atendente = atendente;
 		this.pagamento = pagamento;
+		this.atendente = atendente;
+		this.cliente = cliente;
 	}
 
 	public VendaDTO(Venda entity) {
@@ -32,7 +35,7 @@ public class VendaDTO implements Serializable {
 		this.data = entity.getData();
 		this.pagamento = entity.getPagamento();
 		this.atendente = entity.getAtendente();
-
+		this.cliente = entity.getCliente();
 
 	}
 	
@@ -68,6 +71,15 @@ public class VendaDTO implements Serializable {
 	public void setAtendente(Atendente atendente) {
 		this.atendente = atendente;
 	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	
 
 	
 	

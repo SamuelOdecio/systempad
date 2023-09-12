@@ -30,6 +30,7 @@ public class ItemVendaResource {
 		List<ItemVendaDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
+	/*
 
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<ItemVendaDTO> findById(@PathVariable Long id){
@@ -61,4 +62,5 @@ public class ItemVendaResource {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
+	*/
 }

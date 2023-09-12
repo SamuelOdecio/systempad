@@ -32,16 +32,20 @@ public class Venda implements Serializable {
 	@JoinColumn(name = "id_atendente_fk")
 	private Atendente atendente;
 	
+	@ManyToOne
+	@JoinColumn(name = "id_cliente_fk")
+	private Cliente cliente;
 	
 	public Venda() {
 
 	}
 
-	public Venda(Long idVenda, Date data, Pagamento pagamento, Atendente atendente) {
+	public Venda(Long idVenda, Date data, Pagamento pagamento, Atendente atendente, Cliente cliente) {
 		this.idVenda = idVenda;
 		this.data = data;
 		this.pagamento = pagamento;
 		this.atendente = atendente;
+		this.cliente = cliente;
 
 
 	}
@@ -70,13 +74,20 @@ public class Venda implements Serializable {
 		this.pagamento = pagamento;
 	}
 
-	
 	public Atendente getAtendente() {
 		return atendente;
 	}
 
 	public void setAtendente(Atendente atendente) {
 		this.atendente = atendente;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 
 	@Override
