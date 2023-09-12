@@ -30,12 +30,11 @@ public class AtendenteResource {
 		List<AtendenteDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
-	/*
-
+	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<AtendenteDTO> findById(@PathVariable Long id){
+	public ResponseEntity<AtendenteDTO> findById(@PathVariable Long id){		
 		AtendenteDTO dto = service.findById(id);
-		return ResponseEntity.ok().body(dto);
+		return ResponseEntity.ok().body(dto);	
 	}
 	
 	@PostMapping
@@ -48,19 +47,17 @@ public class AtendenteResource {
 					.toUri();
 		return ResponseEntity.created(uri).body(null);
 	}
-
+	
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<AtendenteDTO> update(
-			@PathVariable Long id,
-			@RequestBody AtendenteDTO dto){
+	public ResponseEntity<AtendenteDTO> update(@PathVariable Long id, @RequestBody AtendenteDTO dto){
 		dto = service.update(id, dto);
 		return ResponseEntity.ok().body(dto);
 	}
-
+	
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Long id){
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
-	*/
+
 }
