@@ -30,12 +30,11 @@ public class ItemVendaResource {
 		List<ItemVendaDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
-	/*
-
+	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<ItemVendaDTO> findById(@PathVariable Long id){
+	public ResponseEntity<ItemVendaDTO> findById(@PathVariable Long id){		
 		ItemVendaDTO dto = service.findById(id);
-		return ResponseEntity.ok().body(dto);
+		return ResponseEntity.ok().body(dto);	
 	}
 	
 	@PostMapping
@@ -44,23 +43,20 @@ public class ItemVendaResource {
 		URI uri = ServletUriComponentsBuilder
 					.fromCurrentRequest()
 					.path("/{id}")
-					.buildAndExpand(dto.getIdProduto())
+					.buildAndExpand(dto.getIdItemVenda())
 					.toUri();
 		return ResponseEntity.created(uri).body(null);
 	}
-
+	
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<ItemVendaDTO> update(
-			@PathVariable Long id,
-			@RequestBody ItemVendaDTO dto){
+	public ResponseEntity<ItemVendaDTO> update(@PathVariable Long id, @RequestBody ItemVendaDTO dto){
 		dto = service.update(id, dto);
 		return ResponseEntity.ok().body(dto);
 	}
-
+	
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Long id){
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
-	*/
 }
