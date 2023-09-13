@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import br.com.systempad.dto.ClienteDTO;
 import br.com.systempad.entities.Cliente;
 import br.com.systempad.repositories.ClienteRepository;
-import br.com.systempad.resources.exceptions.DataBaseException;
+import br.com.systempad.services.exceptions.DataBaseException;
 import br.com.systempad.services.exceptions.ResourceNotFoundException;
 
 @Service

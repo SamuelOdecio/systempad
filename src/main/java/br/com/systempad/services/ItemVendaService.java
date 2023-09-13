@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import br.com.systempad.dto.ItemVendaDTO;
 import br.com.systempad.entities.ItemVenda;
 import br.com.systempad.repositories.ItemVendaRepository;
-import br.com.systempad.resources.exceptions.DataBaseException;
+import br.com.systempad.services.exceptions.DataBaseException;
 import br.com.systempad.services.exceptions.ResourceNotFoundException;
 
 

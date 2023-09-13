@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import br.com.systempad.dto.AtendenteDTO;
 import br.com.systempad.entities.Atendente;
 import br.com.systempad.repositories.AtendenteRepository;
-import br.com.systempad.resources.exceptions.DataBaseException;
+import br.com.systempad.services.exceptions.DataBaseException;
 import br.com.systempad.services.exceptions.ResourceNotFoundException;
 
 @Service
