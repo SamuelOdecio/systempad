@@ -10,6 +10,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import br.com.systempad.dto.BuscaClienteNomeDTO;
 import br.com.systempad.dto.ClienteDTO;
 import br.com.systempad.entities.Cliente;
 import br.com.systempad.repositories.ClienteRepository;
@@ -33,6 +34,12 @@ public class ClienteService {
 		Optional<Cliente> obj = repository.findById(id);
 		Cliente entity = obj.orElseThrow(() -> new ResourceNotFoundException("O registro não foi localizado na base de dados"));
 		return new ClienteDTO(entity);
+	}
+	
+	@Transactional(readOnly = true)
+	public BuscaClienteNomeDTO findByBuscaNomeCliente(String nomeCliente){
+		Cliente obj = repository.findByNomeCliente(nomeCliente);
+		return new BuscaClienteNomeDTO(obj);
 	}
 	
 	@Transactional

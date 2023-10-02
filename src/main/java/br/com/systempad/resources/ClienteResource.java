@@ -1,7 +1,5 @@
 package br.com.systempad.resources;
 
-import br.com.systempad.dto.ClienteDTO;
-import br.com.systempad.services.ClienteService;
 import java.net.URI;
 import java.util.List;
 
@@ -16,6 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import br.com.systempad.dto.BuscaClienteNomeDTO;
+import br.com.systempad.dto.ClienteDTO;
+import br.com.systempad.services.ClienteService;
 
 @RestController
 @RequestMapping(value = "/cliente")
@@ -36,6 +38,14 @@ public class ClienteResource {
 		return ResponseEntity.ok().body(dto);	
 	}
 	
+	// START - Query Methods=====================================================
+		@GetMapping(value = "/buscacliente/{nomeCliente}")
+		public ResponseEntity<BuscaClienteNomeDTO> findByNomeCliente(@PathVariable String nomeCliente){
+			BuscaClienteNomeDTO dto = service.findByBuscaNomeCliente(nomeCliente);
+			return ResponseEntity.ok().body(dto);
+		}
+		
+		
 	@PostMapping
 	public ResponseEntity<ClienteDTO> insert(@RequestBody ClienteDTO dto){
 		dto = service.insert(dto);
