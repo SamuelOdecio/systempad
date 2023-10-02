@@ -16,44 +16,56 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import br.com.systempad.dto.VendaDTO;
+import br.com.systempad.entities.Cliente;
+import br.com.systempad.enums.Pagamento;
 import br.com.systempad.services.VendaService;
 
 @RestController
 @RequestMapping(value = "/venda")
 public class VendaResource {
 
-	@Autowired
-	private VendaService service;
+    @Autowired
+    private VendaService service;
 
-	@GetMapping
-	public ResponseEntity<List<VendaDTO>> findAll() {
-		List<VendaDTO> list = service.findAll();
-		return ResponseEntity.ok().body(list);
-	}
+	@GetMapping(value = "findAll")
+    public ResponseEntity<List<VendaDTO>> findAll() {
+        List<VendaDTO> list = service.findAll();
+        return ResponseEntity.ok().body(list);
+    }
 
-	@GetMapping(value = "/{id}")
-	public ResponseEntity<VendaDTO> findById(@PathVariable Long id) {
-		VendaDTO dto = service.findById(id);
-		return ResponseEntity.ok().body(dto);
-	}
+    @GetMapping(value = "find/{id}")
+    public ResponseEntity<VendaDTO> findById(@PathVariable Long id) {
+        VendaDTO dto = service.findById(id);
+        return ResponseEntity.ok().body(dto);
+    }
 
-	@PostMapping
-	public ResponseEntity<VendaDTO> insert(@RequestBody VendaDTO dto) {
-		dto = service.insert(dto);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getIdVenda())
-				.toUri();
-		return ResponseEntity.created(uri).body(null);
-	}
+    @PostMapping
+    public ResponseEntity<VendaDTO> insert(@RequestBody VendaDTO dto) {
+        dto = service.insert(dto);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getIdVenda())
+                .toUri();
+        return ResponseEntity.created(uri).body(null);
+    }
 
-	@PutMapping(value = "/{id}")
-	public ResponseEntity<VendaDTO> update(@PathVariable Long id, @RequestBody VendaDTO dto) {
-		dto = service.update(id, dto);
-		return ResponseEntity.ok().body(dto);
-	}
+    @PutMapping(value = "update/{id}")
+    public ResponseEntity<VendaDTO> update(@PathVariable Long id, @RequestBody VendaDTO dto) {
+        dto = service.update(id, dto);
+        return ResponseEntity.ok().body(dto);
+    }
 
-	@DeleteMapping(value = "/{id}")
-	public ResponseEntity<Void> delete(@PathVariable Long id) {
-		service.delete(id);
-		return ResponseEntity.noContent().build();
-	}
+    @DeleteMapping(value = "delete/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        service.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping(value = "metodoDePagamento/{id}")
+    public ResponseEntity<List<VendaDTO>> findByPagamento(@PathVariable Pagamento pagamento) {
+        return null;
+    }
+
+    @GetMapping(value = "vendaPorCliente/{id}")
+    public ResponseEntity<List<VendaDTO>> findByCliente(@PathVariable Cliente cliente) {
+        return null;
+    }
 }

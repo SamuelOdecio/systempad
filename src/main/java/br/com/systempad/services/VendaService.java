@@ -11,66 +11,81 @@ import org.springframework.transaction.annotation.Transactional;
 
 import br.com.systempad.dto.VendaDTO;
 import br.com.systempad.entities.Venda;
+import br.com.systempad.enums.Pagamento;
 import br.com.systempad.repositories.VendaRepository;
 import br.com.systempad.services.exceptions.DataBaseException;
 import br.com.systempad.services.exceptions.ResourceNotFoundException;
+import br.com.systempad.entities.Cliente;
 
 
 @Service
 public class VendaService {
 
+    @Autowired
+    private VendaRepository repository;
 
-	@Autowired
-	private VendaRepository repository;
+    @Transactional(readOnly = true)
+    public List<VendaDTO> findAll() {
+        List<Venda> lista = repository.findAll();
+        return lista.stream().map(x -> new VendaDTO(x)).collect(Collectors.toList());
+    }
 
-	@Transactional(readOnly = true)
-	public List<VendaDTO> findAll(){
-		List<Venda> lista = repository.findAll();
-		return lista.stream().map(x -> new VendaDTO(x)).collect(Collectors.toList());
-	}
-	
-	@Transactional(readOnly = true)
-	public VendaDTO findById(Long id){
-		Optional<Venda> obj = repository.findById(id);
-		Venda entity = obj.orElseThrow(() -> new ResourceNotFoundException("O registro não foi localizado na base de dados"));
-		return new VendaDTO(entity);
-	}
-	
-	@Transactional
-	public VendaDTO insert(VendaDTO dto) {
-		Venda entity = new Venda();		
-		converterEntityToDTO(entity, dto);				
-		entity = repository.save(entity);
-		return new VendaDTO(entity);
-	}
-	
-	@Transactional
-	public VendaDTO update(Long id, VendaDTO dto) {
-		try {
-			Venda entity = repository.getReferenceById(id);
-			
-			converterEntityToDTO(entity, dto);
-			
-			entity = repository.save(entity);
-			return new VendaDTO(entity);
-		} catch (jakarta.persistence.EntityNotFoundException e) {
-			throw new ResourceNotFoundException("O recurso com o ID "+id+" não foi localizado");
-		}
-	}
-	
-	private void converterEntityToDTO(Venda entity, VendaDTO dto) {
-		entity.setData(dto.getData());
-		entity.setPagamento(dto.getPagamento());
-		entity.setAtendente(dto.getAtendente());
-		entity.setCliente(dto.getCliente());
-		
-	}
-	
-	public void delete(Long id) {
-		try {
-			repository.deleteById(id);
-		} catch (DataIntegrityViolationException e) {
-			throw new DataBaseException("Violação de Integridade");
-		}			
-	}
+    @Transactional(readOnly = true)
+    public VendaDTO findById(Long id) {
+        Optional<Venda> obj = repository.findById(id);
+        Venda entity = obj.orElseThrow(() -> new ResourceNotFoundException("O registro não foi localizado na base de dados"));
+        return new VendaDTO(entity);
+    }
+
+    @Transactional
+    public VendaDTO insert(VendaDTO dto) {
+        Venda entity = new Venda();
+        converterEntityToDTO(entity, dto);
+        entity = repository.save(entity);
+        return new VendaDTO(entity);
+    }
+
+    @Transactional
+    public VendaDTO update(Long id, VendaDTO dto) {
+        try {
+            Venda entity = repository.getReferenceById(id);
+
+            converterEntityToDTO(entity, dto);
+
+            entity = repository.save(entity);
+            return new VendaDTO(entity);
+        } catch (jakarta.persistence.EntityNotFoundException e) {
+            throw new ResourceNotFoundException("O recurso com o ID " + id + " não foi localizado");
+        }
+    }
+
+    private void converterEntityToDTO(Venda entity, VendaDTO dto) {
+        entity.setData(dto.getData());
+        entity.setPagamento(dto.getPagamento());
+        entity.setAtendente(dto.getAtendente());
+        entity.setCliente(dto.getCliente());
+
+    }
+
+    public void delete(Long id) {
+        try {
+            repository.deleteById(id);
+        } catch (DataIntegrityViolationException e) {
+            throw new DataBaseException("Violação de Integridade");
+        }
+    }
+
+    @Transactional(readOnly = true)
+    public List<VendaDTO> findByPagamento(Pagamento pagamento) {
+
+        return null;
+
+    }
+
+    @Transactional(readOnly = true)
+    public List<VendaDTO> findByCliente(Cliente cliente) {
+        
+        return null;
+        
+    }
 }
