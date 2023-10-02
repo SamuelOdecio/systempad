@@ -2,7 +2,7 @@ package br.com.systempad.dto;
 
 import java.io.Serializable;
 
-import br.com.systempad.entities.Cliente;
+import br.com.systempad.dto.ClienteDTO;
 
 public class BuscaClienteNomeDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -12,7 +12,7 @@ public class BuscaClienteNomeDTO implements Serializable {
 
 	public BuscaClienteNomeDTO() { }
 	
-	public BuscaClienteNomeDTO(Cliente nomeCliente) {
+	public BuscaClienteNomeDTO(ClienteDTO nomeCliente) {
 		this.nomeCliente = nomeCliente.getNome();
 
 	}

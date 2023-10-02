@@ -15,16 +15,7 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
 	
 	//QueryMethods
-		Cliente findByNomeCliente(String nomeCliente);
-
-		//@Query - Consultas customizadas ==================================
-
 		
-		// SELECT * FROM TB_CLIENTE where NOME =
-		@Query("SELECT new br.com.systempad.dto.BuscaClienteNomeDTO(obj.nomeCliente) "
-				+ " FROM Cliente obj WHERE obj.nome = :nome")
-		List<BuscaClienteNomeDTO> findByNomeSQL(String nome);
-
 
 		
 		

@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import br.com.systempad.dto.VendaDTO;
-import br.com.systempad.entities.Cliente;
+import br.com.systempad.dto.buscarVendaPorPagamentoDTO;
 import br.com.systempad.enums.Pagamento;
 import br.com.systempad.services.VendaService;
 
@@ -27,7 +27,7 @@ public class VendaResource {
     @Autowired
     private VendaService service;
 
-	@GetMapping(value = "findAll")
+    @GetMapping(value = "findAll")
     public ResponseEntity<List<VendaDTO>> findAll() {
         List<VendaDTO> list = service.findAll();
         return ResponseEntity.ok().body(list);
@@ -60,12 +60,9 @@ public class VendaResource {
     }
 
     @GetMapping(value = "metodoDePagamento/{id}")
-    public ResponseEntity<List<VendaDTO>> findByPagamento(@PathVariable Pagamento pagamento) {
-        return null;
+    public ResponseEntity<List<Pagamento>> findByPagamento(@PathVariable Pagamento pagamento) {
+        List<Pagamento> lista = service.findByPagamento(pagamento);
+        return ResponseEntity.ok().body(lista);
     }
 
-    @GetMapping(value = "vendaPorCliente/{id}")
-    public ResponseEntity<List<VendaDTO>> findByCliente(@PathVariable Cliente cliente) {
-        return null;
-    }
 }

@@ -39,11 +39,7 @@ public class ClienteResource {
 	}
 	
 	// START - Query Methods=====================================================
-		@GetMapping(value = "/buscacliente/{nomeCliente}")
-		public ResponseEntity<BuscaClienteNomeDTO> findByNomeCliente(@PathVariable String nomeCliente){
-			BuscaClienteNomeDTO dto = service.findByBuscaNomeCliente(nomeCliente);
-			return ResponseEntity.ok().body(dto);
-		}
+	
 		
 		
 	@PostMapping

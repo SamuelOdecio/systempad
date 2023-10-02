@@ -36,11 +36,7 @@ public class ClienteService {
 		return new ClienteDTO(entity);
 	}
 	
-	@Transactional(readOnly = true)
-	public BuscaClienteNomeDTO findByBuscaNomeCliente(String nomeCliente){
-		Cliente obj = repository.findByNomeCliente(nomeCliente);
-		return new BuscaClienteNomeDTO(obj);
-	}
+
 	
 	@Transactional
 	public ClienteDTO insert(ClienteDTO dto) {

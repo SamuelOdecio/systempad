@@ -10,13 +10,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.com.systempad.dto.VendaDTO;
+import br.com.systempad.dto.buscarVendaPorPagamentoDTO;
 import br.com.systempad.entities.Venda;
 import br.com.systempad.enums.Pagamento;
 import br.com.systempad.repositories.VendaRepository;
 import br.com.systempad.services.exceptions.DataBaseException;
 import br.com.systempad.services.exceptions.ResourceNotFoundException;
-import br.com.systempad.entities.Cliente;
-
 
 @Service
 public class VendaService {
@@ -76,16 +75,11 @@ public class VendaService {
     }
 
     @Transactional(readOnly = true)
-    public List<VendaDTO> findByPagamento(Pagamento pagamento) {
+    public List<Pagamento> findByPagamento(Pagamento pagamento) {
+        List<Pagamento> obj = repository.findByPagamento(pagamento);
+        return obj;
 
-        return null;
 
     }
 
-    @Transactional(readOnly = true)
-    public List<VendaDTO> findByCliente(Cliente cliente) {
-        
-        return null;
-        
-    }
 }

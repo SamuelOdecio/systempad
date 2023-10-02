@@ -15,10 +15,9 @@ import br.com.systempad.entities.Cliente;
 public interface VendaRepository extends JpaRepository  <Venda, Long> {
 
     @Query()
-    List<VendaDTO> findByPagamento(Pagamento pagamento);
+    List<Pagamento> findByPagamento(Pagamento pagamento);
     
-        @Query()
-    List<VendaDTO> findByCliente (Cliente cliente);
+       
     
     
 }
