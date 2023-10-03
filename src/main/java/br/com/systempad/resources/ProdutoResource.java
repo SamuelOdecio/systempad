@@ -25,13 +25,13 @@ public class ProdutoResource {
 	@Autowired
 	private ProdutoService service;
 	
-	@GetMapping(value = "findAll")
+	@GetMapping
 	public ResponseEntity<List<ProdutoDTO>> findAll() {
 		List<ProdutoDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 	
-	@GetMapping(value = "find/{id}")
+	@GetMapping(value = "/{id}")
 	public ResponseEntity<ProdutoDTO> findById(@PathVariable Long id){		
 		ProdutoDTO dto = service.findById(id);
 		return ResponseEntity.ok().body(dto);	
@@ -48,13 +48,13 @@ public class ProdutoResource {
 		return ResponseEntity.created(uri).body(null);
 	}
 	
-	@PutMapping(value = "update/{id}")
+	@PutMapping(value = "/{id}")
 	public ResponseEntity<ProdutoDTO> update(@PathVariable Long id, @RequestBody ProdutoDTO dto){
 		dto = service.update(id, dto);
 		return ResponseEntity.ok().body(dto);
 	}
 	
-	@DeleteMapping(value = "delete/{id}")
+	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Long id){
 		service.delete(id);
 		return ResponseEntity.noContent().build();
