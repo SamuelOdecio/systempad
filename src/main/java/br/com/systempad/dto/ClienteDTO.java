@@ -13,8 +13,8 @@ public class ClienteDTO implements Serializable {
     private String cpf;
     private String telefone;
     private String email;
-    private String userName;
-    private String senha;
+    private String userName; //tirar
+    private String senha; //tirar
     private String endereco;
 
     public ClienteDTO() {
