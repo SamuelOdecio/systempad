@@ -15,7 +15,7 @@ public class Atendente extends Pessoa {
 	}
 	
 
-    public Atendente (Atendente atendente, Long id, String nome, String cpf, String telefone, String email, String userName, String senha) {
+    public Atendente (Atendente atendente, Long id, String nome, String cpf, String telefone, String email) {
     	super();
         
     }

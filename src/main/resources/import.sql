@@ -12,16 +12,16 @@ INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Caixa de leite', 'Caixa
 INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Caixa de leite de Soja', 'Caixa de Leite de Soja', '10.5');
 
 
-INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, user_name, senha, endereco) VALUES ('CLIENTE 0','000.000.000-00','67 3461-0000','systempad@gmail.com','123456','123456', 'AV. Dourados, 111');
-INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, user_name, senha, endereco) VALUES ('Pedro B','111.222.070-99','67 99999-0000','samuel@gmail.com','samuel190','123456', 'AV. Dourados, 111');
-INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, user_name, senha, endereco) VALUES ('Jotinha A','111.222.070-99','67 99999-0000','samuel@gmail.com','samuel190','123456', 'AV. Dourados, 111');
-INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, user_name, senha, endereco) VALUES ('Marcos R','111.222.070-99','67 99999-0000','samuel@gmail.com','samuel190','123456', 'AV. Dourados, 111');
-INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, user_name, senha, endereco) VALUES ('Gabriel S','111.222.070-99','67 99999-0000','samuel@gmail.com','samuel190','123456', 'AV. Dourados, 111');
-INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, user_name, senha, endereco) VALUES ('Caio M','111.222.070-99','67 99999-0000','samuel@gmail.com','samuel190','123456', 'AV. Dourados, 111');
+INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco) VALUES ('CLIENTE 0','000.000.000-00','67 3461-0000','systempad@gmail.com', 'AV. Dourados, 111');
+INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco) VALUES ('Pedro B','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111');
+INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco) VALUES ('Jotinha A','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111');
+INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco) VALUES ('Marcos R','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111');
+INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco) VALUES ('Gabriel S','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111');
+INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco) VALUES ('Caio M','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111');
 
 
-INSERT INTO TB_ATENDENTE (nome, cpf, telefone, email, user_name, senha) VALUES ('Samuel Atendente','111.222.070-99','67 99999-0000','samuel@gmail.com','samuel190','123456');
-INSERT INTO TB_ATENDENTE (nome, cpf, telefone, email, user_name, senha) VALUES  ('Gabriel','111.333.060-99','67 99999-0011','gabriel@gmail.com','gabriel190','000000');
+INSERT INTO TB_ATENDENTE (nome, cpf, telefone, email) VALUES ('Samuel Atendente','111.222.070-99','67 99999-0000','samuel@gmail.com');
+INSERT INTO TB_ATENDENTE (nome, cpf, telefone, email) VALUES  ('Gabriel','111.333.060-99','67 99999-0011','gabriel@gmail.com');
 
 
 INSERT INTO TB_VENDA (pagamento, id_atendente_fk, id_cliente_fk) VALUES ('PIX', 1 , 1);

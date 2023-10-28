@@ -12,23 +12,20 @@ public class AtendenteDTO implements Serializable {
     private String cpf;
     private String telefone;
     private String email;
-    private String userName;
-    private String senha;
+
 
         
 	public AtendenteDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AtendenteDTO(Long id, String nome, String cpf, 
-                String telefone, String email, String userName, String senha) {
+	public AtendenteDTO(Long id, String nome, String cpf, String telefone, String email) {
 				this.id = id;
                 this.nome = nome;
                 this.cpf = cpf;
                 this.telefone = telefone;
                 this.email = email;
-                this.userName = userName;
-                this.senha = senha;
+
 	}
 
 	public AtendenteDTO(Atendente entity) {
@@ -37,8 +34,7 @@ public class AtendenteDTO implements Serializable {
 		this.cpf = entity.getCpf();
         this.telefone = entity.getCpf();
         this.email = entity.getEmail();
-        this.userName = entity.getUserName();
-		this.senha = entity.getSenha();
+
 
 	}
 
@@ -81,22 +77,7 @@ public class AtendenteDTO implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-        
-          public String getUserName() {
-		return userName;
-	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-        
-          public String getSenha() {
-		return senha;
-	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
 
 
 	
