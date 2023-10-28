@@ -66,6 +66,7 @@ public class ClienteService {
 		entity.setTelefone(dto.getTelefone());
 		entity.setEmail(dto.getEmail());
 		entity.setEndereco(dto.getEndereco());
+		entity.setImagem(dto.getImagem());
 		
 	}
 	

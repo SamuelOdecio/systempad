@@ -13,24 +13,22 @@ public class ClienteDTO implements Serializable {
     private String cpf;
     private String telefone;
     private String email;
-    private String userName; //tirar
-    private String senha; //tirar
     private String endereco;
+    private String imagem;
 
     public ClienteDTO() {
         // TODO Auto-generated constructor stub
     }
 
     public ClienteDTO(Long id, String nome, String cpf,
-            String telefone, String email, String userName, String senha, String endereco) {
+            String telefone, String email, String endereco, String imagem) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
         this.email = email;
-        this.userName = userName;
-        this.senha = senha;
         this.endereco = endereco;
+        this.imagem = imagem;
     }
 
     public ClienteDTO(Cliente entity) {
@@ -39,10 +37,8 @@ public class ClienteDTO implements Serializable {
         this.cpf = entity.getCpf();
         this.telefone = entity.getCpf();
         this.email = entity.getEmail();
-        this.userName = entity.getUserName();
-        this.senha = entity.getSenha();
         this.endereco = entity.getEndereco();
-
+        this.imagem = entity.getImagem();
     }
 
     public Long getId() {
@@ -85,22 +81,6 @@ public class ClienteDTO implements Serializable {
         this.email = email;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
     public String getEndereco() {
         return endereco;
     }
@@ -108,5 +88,14 @@ public class ClienteDTO implements Serializable {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
+	}
+    
 
 }

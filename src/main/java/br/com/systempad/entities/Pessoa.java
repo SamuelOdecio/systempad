@@ -17,8 +17,7 @@ public abstract class Pessoa implements Serializable {
 	private String cpf;
 	private String telefone;
 	private String email;
-	private String userName;
-	private String senha;
+	private String imagem;
 	
 	
 	public Long getId() {
@@ -51,18 +50,13 @@ public abstract class Pessoa implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getUserName() {
-		return userName;
+	public String getImagem() {
+		return imagem;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
-	public String getSenha() {
-		return senha;
-	}
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
+	
 
 
 }

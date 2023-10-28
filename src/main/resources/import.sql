@@ -12,12 +12,12 @@ INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Caixa de leite', 'Caixa
 INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Caixa de leite de Soja', 'Caixa de Leite de Soja', '10.5');
 
 
-INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco) VALUES ('CLIENTE 0','000.000.000-00','67 3461-0000','systempad@gmail.com', 'AV. Dourados, 111');
-INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco) VALUES ('Pedro B','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111');
-INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco) VALUES ('Jotinha A','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111');
-INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco) VALUES ('Marcos R','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111');
-INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco) VALUES ('Gabriel S','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111');
-INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco) VALUES ('Caio M','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111');
+INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco, imagem) VALUES ('CLIENTE 0','000.000.000-00','67 3461-0000','systempad@gmail.com', 'AV. Dourados, 111', 'https://cdn-icons-png.flaticon.com/512/17/17004.png');
+INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco, imagem) VALUES ('Pedro B','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111', 'https://cdn-icons-png.flaticon.com/512/17/17004.png');
+INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco, imagem) VALUES ('Jotinha A','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111', 'https://cdn-icons-png.flaticon.com/512/17/17004.png');
+INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco, imagem) VALUES ('Marcos R','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111', 'https://cdn-icons-png.flaticon.com/512/17/17004.png');
+INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco, imagem) VALUES ('Gabriel S','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111', 'https://cdn-icons-png.flaticon.com/512/17/17004.png');
+INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco, imagem) VALUES ('Caio M','111.222.070-99','67 99999-0000','samuel@gmail.com', 'AV. Dourados, 111', 'https://cdn-icons-png.flaticon.com/512/17/17004.png');
 
 
 INSERT INTO TB_ATENDENTE (nome, cpf, telefone, email) VALUES ('Samuel Atendente','111.222.070-99','67 99999-0000','samuel@gmail.com');

@@ -9,6 +9,7 @@ public class Cliente extends Pessoa {
     private static final long serialVersionUID = 1L;
     
 	private String endereco;
+	
 
 	public String getEndereco() {
 		return endereco;
