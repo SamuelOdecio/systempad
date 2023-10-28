@@ -62,6 +62,7 @@ public class ProdutoService {
 		entity.setNome(dto.getNome());
 		entity.setDescricao(dto.getDescricao());
 		entity.setPreco(dto.getPreco());
+		entity.setImagem(dto.getImagem());
 		
 	}
 	

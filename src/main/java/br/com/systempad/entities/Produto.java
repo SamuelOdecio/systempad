@@ -20,17 +20,19 @@ public class Produto implements Serializable {
 	private String nome;
 	private String descricao;
 	private Double preco;
+	private String imagem;
 	
 	
 	public Produto() {
 		
 	}
 
-	public Produto(Long id, String nome, String descricao, Double preco) {
+	public Produto(Long id, String nome, String descricao, Double preco, String imagem) {
 		this.idProduto = id;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.preco = preco;
+		this.imagem = imagem;
 		
 	}
 	
@@ -64,6 +66,14 @@ public class Produto implements Serializable {
 
 	public void setPreco(Double preco) {
 		this.preco = preco;
+	}
+
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 
 	@Override

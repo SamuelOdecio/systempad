@@ -1,5 +1,5 @@
-INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Pao Frances', 'Pão Frânces', 0.5);
-INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Pao Integral', 'Pão Integral feito com ingredientes naturais', 1.5);
+INSERT INTO TB_PRODUTO (nome, descricao, preco, imagem) VALUES ('Pao de Frances', 'Pão de Frances', 0.5, 'https://amopaocaseiro.com.br/wp-content/uploads/2019/12/pao-de-forma-caseiro_02-840x560.jpg');
+INSERT INTO TB_PRODUTO (nome, descricao, preco, imagem) VALUES ('Pao Integral', 'Pão Integral feito com ingredientes naturais', 1.5, 'https://encurtador.com.br/lGLP9');
 INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Manteiga', 'Qually Com Sal', '7.5');
 INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Manteiga', 'Delicia Com Sal', '7.8');
 INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Manteiga', 'Qually Sem Sal', '7.5');
@@ -62,7 +62,6 @@ INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('5', 
 INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('6', 11, 2);
 INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('7', 3, 3);
 INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('8', 12, 4);
-
 
 
 //QUERRY DE PESQUISAS
