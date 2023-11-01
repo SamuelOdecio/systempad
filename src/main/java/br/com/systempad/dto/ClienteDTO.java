@@ -35,7 +35,7 @@ public class ClienteDTO implements Serializable {
         this.id = entity.getId();
         this.nome = entity.getNome();
         this.cpf = entity.getCpf();
-        this.telefone = entity.getCpf();
+        this.telefone = entity.getTelefone();
         this.email = entity.getEmail();
         this.endereco = entity.getEndereco();
         this.imagem = entity.getImagem();
