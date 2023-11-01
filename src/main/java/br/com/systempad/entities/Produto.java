@@ -16,7 +16,7 @@ public class Produto implements Serializable {
 	
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idProduto;
+	private Long id;
 	private String nome;
 	private String descricao;
 	private Double preco;
@@ -28,7 +28,7 @@ public class Produto implements Serializable {
 	}
 
 	public Produto(Long id, String nome, String descricao, Double preco, String imagem) {
-		this.idProduto = id;
+		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.preco = preco;
@@ -36,12 +36,12 @@ public class Produto implements Serializable {
 		
 	}
 	
-	public Long getIdProduto() {
-		return idProduto;
+	public Long getId() {
+		return id;
 	}
 
-	public void setIdProduto(Long idProduto) {
-		this.idProduto = idProduto;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getNome() {
@@ -90,7 +90,7 @@ public class Produto implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Produto other = (Produto) obj;
-		return Objects.equals(idProduto, other.idProduto);
+		return Objects.equals(id, other.id);
 	}
 	
 }

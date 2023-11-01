@@ -7,7 +7,7 @@ import br.com.systempad.entities.Produto;
 public class ProdutoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private Long idProduto;
+	private Long id;
 	private String nome;
 	private String descricao;
 	private Double preco;
@@ -18,7 +18,7 @@ public class ProdutoDTO implements Serializable {
 	}
 
 	public ProdutoDTO(Long id, String nome, String descricao, Double preco, String imagem) {
-		this.idProduto = id;
+		this.Id = id;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.preco = preco;
@@ -26,7 +26,7 @@ public class ProdutoDTO implements Serializable {
 	}
 
 	public ProdutoDTO(Produto entity) {
-		this.idProduto = entity.getIdProduto();
+		this.id = entity.getId();
 		this.nome = entity.getNome();
 		this.descricao = entity.getDescricao();
 		this.preco = entity.getPreco();
@@ -34,12 +34,12 @@ public class ProdutoDTO implements Serializable {
 		
 	}
 
-	public Long getIdProduto() {
-		return idProduto;
+	public Long getId() {
+		return id;
 	}
 
-	public void setIdProduto(Long idProduto) {
-		this.idProduto = idProduto;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getNome() {
