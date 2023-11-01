@@ -78,7 +78,7 @@ public class Produto implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(idProduto);
+		return Objects.hash(id);
 	}
 
 	@Override

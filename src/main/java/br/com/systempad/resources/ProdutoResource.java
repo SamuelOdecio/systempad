@@ -43,7 +43,7 @@ public class ProdutoResource {
 		URI uri = ServletUriComponentsBuilder
 					.fromCurrentRequest()
 					.path("/{id}")
-					.buildAndExpand(dto.getIdProduto())
+					.buildAndExpand(dto.getId())
 					.toUri();
 		return ResponseEntity.created(uri).body(null);
 	}
