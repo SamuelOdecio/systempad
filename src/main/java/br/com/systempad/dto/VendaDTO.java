@@ -11,7 +11,7 @@ import br.com.systempad.enums.Pagamento;
 public class VendaDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private Long idVenda;
+	private Long id;
 	private Date data;
 	private Pagamento pagamento;
 	private Atendente atendente;
@@ -23,7 +23,7 @@ public class VendaDTO implements Serializable {
 	}
 
 	public VendaDTO(Long idVenda, Date data, Pagamento pagamento, Atendente atendente, Cliente cliente) {
-		this.idVenda = idVenda;
+		this.id = idVenda;
 		this.data = data;
 		this.pagamento = pagamento;
 		this.atendente = atendente;
@@ -31,7 +31,7 @@ public class VendaDTO implements Serializable {
 	}
 
 	public VendaDTO(Venda entity) {
-		this.idVenda = entity.getIdVenda();
+		this.id = entity.getIdVenda();
 		this.data = entity.getData();
 		this.pagamento = entity.getPagamento();
 		this.atendente = entity.getAtendente();
@@ -41,11 +41,11 @@ public class VendaDTO implements Serializable {
 	
 
 	public Long getIdVenda() {
-		return idVenda;
+		return id;
 	}
 
 	public void setIdVenda(Long idVenda) {
-		this.idVenda = idVenda;
+		this.id = idVenda;
 	}
 
 	public Date getData() {

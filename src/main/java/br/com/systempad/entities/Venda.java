@@ -23,7 +23,7 @@ public class Venda implements Serializable {
 
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idVenda;
+	private Long id;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data;
 	@Enumerated(EnumType.STRING)
@@ -41,7 +41,7 @@ public class Venda implements Serializable {
 	}
 
 	public Venda(Long idVenda, Date data, Pagamento pagamento, Atendente atendente, Cliente cliente) {
-		this.idVenda = idVenda;
+		this.id = idVenda;
 		this.data = data;
 		this.pagamento = pagamento;
 		this.atendente = atendente;
@@ -51,11 +51,11 @@ public class Venda implements Serializable {
 	}
 
 	public Long getIdVenda() {
-		return idVenda;
+		return id;
 	}
 
 	public void setIdVenda(Long idVenda) {
-		this.idVenda = idVenda;
+		this.id = idVenda;
 	}
 
 	public Date getData() {
@@ -92,7 +92,7 @@ public class Venda implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(idVenda);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -104,7 +104,7 @@ public class Venda implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Venda other = (Venda) obj;
-		return Objects.equals(idVenda, other.idVenda);
+		return Objects.equals(id, other.id);
 	}
 
 }
