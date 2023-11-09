@@ -32,7 +32,7 @@ public class AtendenteDTO implements Serializable {
 		this.id = entity.getId();
 		this.nome = entity.getNome();
 		this.cpf = entity.getCpf();
-        this.telefone = entity.getCpf();
+        this.telefone = entity.getTelefone();
         this.email = entity.getEmail();
 
 
