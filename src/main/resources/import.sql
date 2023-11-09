@@ -1,15 +1,9 @@
 INSERT INTO TB_PRODUTO (nome, descricao, preco, imagem) VALUES ('Pao de Frances', 'Pão de Frances', 0.5, 'https://amopaocaseiro.com.br/wp-content/uploads/2019/12/pao-de-forma-caseiro_02-840x560.jpg');
-INSERT INTO TB_PRODUTO (nome, descricao, preco, imagem) VALUES ('Pao Integral', 'Pão Integral feito com ingredientes naturais', 1.5, 'https://encurtador.com.br/lGLP9');
-INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Manteiga', 'Qually Com Sal', '7.5');
-INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Manteiga', 'Delicia Com Sal', '7.8');
-INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Manteiga', 'Qually Sem Sal', '7.5');
-INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Manteiga', 'Delicia Sem Sal', '7.5');
-INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Mortandela Defumada', 'Bandeja de Mortadela Defumada 0.500kg', '7.0');
-INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Mortandela', 'Bandeja de Mortadela 0.500kg', '5.0');
-INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Queijo Mussarela', 'Bandeja Queijo Mussarela', '6.5');
-INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Queijo Prado', 'Bandeja Queijo Prado', '8.5');
-INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Caixa de leite', 'Caixa de Leite Integral', '5.5');
-INSERT INTO TB_PRODUTO (nome, descricao, preco) VALUES ('Caixa de leite de Soja', 'Caixa de Leite de Soja', '10.5');
+INSERT INTO TB_PRODUTO (nome, descricao, preco, imagem) VALUES ('Pao Integral', 'Pão Integral feito com ingredientes naturais', 1.5, 'https://encurtador.com.br/PU127');
+INSERT INTO TB_PRODUTO (nome, descricao, preco, imagem) VALUES ('Manteiga', 'Qually Com Sal', '7.5', 'https://encurtador.com.br/dkDEY');
+INSERT INTO TB_PRODUTO (nome, descricao, preco, imagem) VALUES ('Manteiga', 'Delicia Com Sal', '7.8', 'https://encurtador.com.br/bhuE6');
+INSERT INTO TB_PRODUTO (nome, descricao, preco, imagem) VALUES ('Caixa de leite', 'Caixa de Leite Integral', '5.5', 'https://encurtador.com.br/aoLT0');
+INSERT INTO TB_PRODUTO (nome, descricao, preco, imagem) VALUES ('Caixa de leite de Soja', 'Caixa de Leite de Soja', '10.5', 'https://encurtador.com.br/pvCF5');
 
 
 INSERT INTO TB_CLIENTE (nome, cpf, telefone, email, endereco, imagem) VALUES ('CLIENTE 0','000.000.000-00','67 3461-0000','systempad@gmail.com', 'AV. Dourados, 111', 'https://cdn-icons-png.flaticon.com/512/17/17004.png');

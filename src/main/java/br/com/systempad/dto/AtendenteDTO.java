@@ -20,7 +20,7 @@ public class AtendenteDTO implements Serializable {
 	}
 
 	public AtendenteDTO(Long id, String nome, String cpf, String telefone, String email) {
-				this.id = id;
+                this.id = id;
                 this.nome = nome;
                 this.cpf = cpf;
                 this.telefone = telefone;
@@ -32,8 +32,8 @@ public class AtendenteDTO implements Serializable {
 		this.id = entity.getId();
 		this.nome = entity.getNome();
 		this.cpf = entity.getCpf();
-        this.telefone = entity.getTelefone();
-        this.email = entity.getEmail();
+                this.telefone = entity.getTelefone();
+                this.email = entity.getEmail();
 
 
 	}
