@@ -32,31 +32,6 @@ INSERT INTO TB_VENDA (pagamento, id_atendente_fk, id_cliente_fk) VALUES ('CARTAO
 INSERT INTO TB_VENDA (pagamento, id_atendente_fk, id_cliente_fk) VALUES ('AVISTA', 1, 2); 
 
 
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('1', 1, 1);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('2', 1, 2);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('3', 3, 3);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('4', 4, 4);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('5', 2, 1);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('6', 1, 2);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('7', 3, 3);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('8', 6, 4);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('9', 2, 1);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('10', 1, 2);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('11', 3, 3);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('12', 4, 4);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('12', 7, 1);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('11', 5, 2);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('10', 9, 3);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('9', 4, 4);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('1', 2, 1);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('2', 10, 2);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('3', 3, 3);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('4', 8, 4);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('5', 2, 1);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('6', 11, 2);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('7', 3, 3);
-INSERT INTO TB_ITEM_VENDA (quantidade, id_produto_fk, id_venda_fk) values ('8', 12, 4);
-
 
 //QUERRY DE PESQUISAS
 

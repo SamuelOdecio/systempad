@@ -43,7 +43,7 @@ public class ItemVendaResource {
 		URI uri = ServletUriComponentsBuilder
 					.fromCurrentRequest()
 					.path("/{id}")
-					.buildAndExpand(dto.getIdItemVenda())
+					.buildAndExpand(dto.getId())
 					.toUri();
 		return ResponseEntity.created(uri).body(null);
 	}

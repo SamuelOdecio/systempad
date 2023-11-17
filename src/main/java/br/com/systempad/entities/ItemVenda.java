@@ -18,7 +18,7 @@ public class ItemVenda implements Serializable {
 	
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idItemVenda;
+	private Long id;
 	private int quantidade;
 	@ManyToOne
 	@JoinColumn(name = "id_produto_fk")
@@ -32,20 +32,20 @@ public class ItemVenda implements Serializable {
 		
 	}
 
-	public ItemVenda(Long idItemVenda,  int quantidade, Produto produto, Venda venda) {
-		this.idItemVenda = idItemVenda;
+	public ItemVenda(Long id,  int quantidade, Produto produto, Venda venda) {
+		this.id = id;
 		this.quantidade = quantidade;
 		this.produto = produto;
 		this.venda = venda;
 		
 	}
 
-	public Long getIdItemVenda() {
-		return idItemVenda;
+	public Long getId() {
+		return id;
 	}
 
-	public void setIdItemVenda(Long idItemVenda) {
-		this.idItemVenda = idItemVenda;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public Produto getProduto() {
@@ -74,7 +74,7 @@ public class ItemVenda implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(idItemVenda);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -86,7 +86,7 @@ public class ItemVenda implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		ItemVenda other = (ItemVenda) obj;
-		return Objects.equals(idItemVenda, other.idItemVenda);
+		return Objects.equals(id, other.id);
 	}
 	
 }
