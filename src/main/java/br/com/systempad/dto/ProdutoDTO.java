@@ -1,8 +1,12 @@
 package br.com.systempad.dto;
 
+import br.com.systempad.entities.ItemVenda;
 import java.io.Serializable;
 
 import br.com.systempad.entities.Produto;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class ProdutoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -13,6 +17,9 @@ public class ProdutoDTO implements Serializable {
 	private Double preco;
 	private String imagem;
 
+        private List<ItemVenda> itemVendas = new ArrayList<>();
+        
+        
 	public ProdutoDTO() {
 		// TODO Auto-generated constructor stub
 	}
@@ -33,6 +40,18 @@ public class ProdutoDTO implements Serializable {
 		this.imagem = entity.getImagem();
 		
 	}
+        
+        public ProdutoDTO(Produto entity, List<ItemVenda> itemVendas) {
+		this(entity);
+		this.itemVendas = itemVendas.stream().map(x -> new ItemVenda(
+				x.getId(), x.getQuantidade(),x.getProduto(),x.getVenda()))
+				.collect(Collectors.toList());
+	}
+
+	public List<ItemVenda> getItemVendas() {
+		return itemVendas;
+	}
+       
 
 	public Long getId() {
 		return id;

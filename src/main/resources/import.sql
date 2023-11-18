@@ -31,6 +31,17 @@ INSERT INTO TB_VENDA (pagamento, id_atendente_fk, id_cliente_fk) VALUES ('CARTAO
 INSERT INTO TB_VENDA (pagamento, id_atendente_fk, id_cliente_fk) VALUES ('CARTAOCREDITO', 2, 6);
 INSERT INTO TB_VENDA (pagamento, id_atendente_fk, id_cliente_fk) VALUES ('AVISTA', 1, 2); 
 
+INSERT INTO TB_ITEM_VENDA (quantidade,id_produto_fk, id_venda_fk) VALUES ('1',1,1);
+INSERT INTO TB_ITEM_VENDA (quantidade,id_produto_fk, id_venda_fk) VALUES ('1',3,1);
+INSERT INTO TB_ITEM_VENDA (quantidade,id_produto_fk, id_venda_fk) VALUES ('1',2,2);
+INSERT INTO TB_ITEM_VENDA (quantidade,id_produto_fk, id_venda_fk) VALUES ('1',1,3);
+INSERT INTO TB_ITEM_VENDA (quantidade,id_produto_fk, id_venda_fk) VALUES ('1',4,4);
+INSERT INTO TB_ITEM_VENDA (quantidade,id_produto_fk, id_venda_fk) VALUES ('1',2,2);
+INSERT INTO TB_ITEM_VENDA (quantidade,id_produto_fk, id_venda_fk) VALUES ('1',1,3);
+INSERT INTO TB_ITEM_VENDA (quantidade,id_produto_fk, id_venda_fk) VALUES ('1',3,1);
+
+
+
 
 
 //QUERRY DE PESQUISAS

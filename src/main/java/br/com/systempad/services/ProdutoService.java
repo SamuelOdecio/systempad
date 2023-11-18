@@ -26,14 +26,14 @@ public class ProdutoService {
 	@Transactional(readOnly = true)
 	public List<ProdutoDTO> findAll(){
 		List<Produto> lista = repository.findAll();
-		return lista.stream().map(x -> new ProdutoDTO(x)).collect(Collectors.toList());
+		return lista.stream().map(x -> new ProdutoDTO(x, x.getItemVendas())).collect(Collectors.toList());
 	}
 	
 	@Transactional(readOnly = true)
 	public ProdutoDTO findById(Long id){
 		Optional<Produto> obj = repository.findById(id);
 		Produto entity = obj.orElseThrow(() -> new ResourceNotFoundException("O registro não foi localizado na base de dados"));
-		return new ProdutoDTO(entity);
+		return new ProdutoDTO(entity, entity.getItemVendas());
 	}
 	
 	@Transactional
