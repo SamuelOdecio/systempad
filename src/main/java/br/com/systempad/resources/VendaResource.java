@@ -42,7 +42,7 @@ public class VendaResource {
     @PostMapping
     public ResponseEntity<VendaDTO> insert(@RequestBody VendaDTO dto) {
         dto = service.insert(dto);
-        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getIdVenda())
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getId())
                 .toUri();
         return ResponseEntity.created(uri).body(null);
     }

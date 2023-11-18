@@ -22,8 +22,8 @@ public class VendaDTO implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public VendaDTO(Long idVenda, Date data, Pagamento pagamento, Atendente atendente, Cliente cliente) {
-		this.id = idVenda;
+	public VendaDTO(Long id, Date data, Pagamento pagamento, Atendente atendente, Cliente cliente) {
+		this.id = id;
 		this.data = data;
 		this.pagamento = pagamento;
 		this.atendente = atendente;
@@ -31,7 +31,7 @@ public class VendaDTO implements Serializable {
 	}
 
 	public VendaDTO(Venda entity) {
-		this.id = entity.getIdVenda();
+		this.id = entity.getId();
 		this.data = entity.getData();
 		this.pagamento = entity.getPagamento();
 		this.atendente = entity.getAtendente();
@@ -40,12 +40,12 @@ public class VendaDTO implements Serializable {
 	}
 	
 
-	public Long getIdVenda() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setIdVenda(Long idVenda) {
-		this.id = idVenda;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public Date getData() {

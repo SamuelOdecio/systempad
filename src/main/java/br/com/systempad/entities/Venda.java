@@ -40,8 +40,8 @@ public class Venda implements Serializable {
 
 	}
 
-	public Venda(Long idVenda, Date data, Pagamento pagamento, Atendente atendente, Cliente cliente) {
-		this.id = idVenda;
+	public Venda(Long id, Date data, Pagamento pagamento, Atendente atendente, Cliente cliente) {
+		this.id = id;
 		this.data = data;
 		this.pagamento = pagamento;
 		this.atendente = atendente;
@@ -50,12 +50,12 @@ public class Venda implements Serializable {
 
 	}
 
-	public Long getIdVenda() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setIdVenda(Long idVenda) {
-		this.id = idVenda;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public Date getData() {
